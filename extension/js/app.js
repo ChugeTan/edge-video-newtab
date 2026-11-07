@@ -28,6 +28,7 @@
     showClock: true,
     showDate: true,
     showSearch: true,
+    searchPosition: 'top-left',
     searchEngine: 'bing',
     currentVideoId: null,
   });
@@ -39,6 +40,7 @@
   };
 
   const FITS = ['cover', 'contain', 'fill'];
+  const SEARCH_POSITIONS = ['top-left', 'center'];
   const RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
   const ROTATE_MINUTES = [1, 5, 10, 30, 60];
   const WEEKDAYS = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
@@ -269,6 +271,7 @@
     s.showClock = !!s.showClock;
     s.showDate = !!s.showDate;
     s.showSearch = !!s.showSearch;
+    s.searchPosition = SEARCH_POSITIONS.includes(s.searchPosition) ? s.searchPosition : DEFAULT_SETTINGS.searchPosition;
     s.searchEngine = ENGINES[s.searchEngine] ? s.searchEngine : DEFAULT_SETTINGS.searchEngine;
     s.currentVideoId = typeof s.currentVideoId === 'string' ? s.currentVideoId : null;
     return s;
@@ -362,6 +365,7 @@
     el.setShowClock = byId('set-show-clock');
     el.setShowDate = byId('set-show-date');
     el.setShowSearch = byId('set-show-search');
+    el.setSearchPosition = byId('set-search-position');
     el.setEngine = byId('set-engine');
     el.btnReset = byId('btn-reset');
     el.dragLayer = byId('drag-layer');
@@ -656,6 +660,9 @@
     el.setShowClock.checked = s.showClock;
     el.setShowDate.checked = s.showDate;
     el.setShowSearch.checked = s.showSearch;
+    el.setSearchPosition.value = s.searchPosition;
+    document.body.classList.toggle('search-top-left', s.searchPosition === 'top-left');
+    document.body.classList.toggle('has-clock', s.showClock || s.showDate);
     el.setEngine.value = s.searchEngine;
 
     el.clockWrap.hidden = !(s.showClock || s.showDate);
@@ -1192,6 +1199,14 @@
 
     el.setShowSearch.addEventListener('change', () => {
       state.settings.showSearch = el.setShowSearch.checked;
+      applySettings();
+      persistSettings();
+    });
+
+    el.setSearchPosition.addEventListener('change', () => {
+      state.settings.searchPosition = SEARCH_POSITIONS.includes(el.setSearchPosition.value)
+        ? el.setSearchPosition.value
+        : DEFAULT_SETTINGS.searchPosition;
       applySettings();
       persistSettings();
     });

@@ -422,6 +422,34 @@ body.ready { opacity: 1; }
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
+/* ---------- 搜索框位置：左上角 ---------- */
+
+body.search-top-left .stage {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px 38px;
+}
+
+body.search-top-left .search {
+  width: min(620px, calc(100vw - 90px));
+}
+
+/* 时钟/日期可见时，搜索框下移避免遮挡 */
+body.search-top-left.has-clock .stage {
+  padding-top: 142px;
+}
+
+body.search-top-left .empty-state {
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  body.search-top-left .stage { padding: 18px 20px; }
+  body.search-top-left.has-clock .stage { padding-top: 122px; }
+  body.search-top-left .search { width: calc(100vw - 40px); }
+}
+
 /* ---------- 空状态 ---------- */
 
 .empty-state {
