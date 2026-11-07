@@ -42,14 +42,14 @@
 
 ### 方式二：Microsoft Edge 加载项商店
 
-扩展已提交 Microsoft Edge Add-ons，当前状态 **In review（审核中）**：
+已在 **Microsoft Edge 加载项商店** 上架：
 
 - 名称：视频新标签页
-- 版本：1.2.0
+- 版本：1.3.0
 - Store ID：`0RDCKBMWDVNB`
 - CRX ID：`ddccmlebbnfkjbfkkkpcdfpgonmidgni`
 
-审核通过后会在 [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons) 上架，本文档会补充商店链接。
+商店链接：https://microsoftedge.microsoft.com/addons/detail/ddccmlebbnfkjbfkkkpcdfpgonmidgni
 
 > 注意：商店版本与开发者模式版本使用不同的扩展 ID，本地数据（视频、设置）不互通。
 
@@ -101,7 +101,7 @@ preview/        预览截图
 - [隐私政策](store/privacy-policy.md)
 - [提交指南](store/submission-guide.md) / [审核测试说明](store/review-notes.md)
 - [提交记录](store/submission-record.md)
-- 发行包：[video-new-tab-v1.2.0.zip](store/package/video-new-tab-v1.2.0.zip)
+- 发行包：[video-new-tab-v1.2.0.zip](store/package/video-new-tab-v1.3.0.zip)
 - 截图、宣传图、商店 Logo
 
 ## 📄 更多文档

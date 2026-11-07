@@ -15,7 +15,7 @@ Features
 • Video background: built-in demo video, plus local video files (drag & drop) or direct video URLs.
 • Playlist: manage multiple videos, previous / next, shuffle and auto-rotation (1-60 minutes).
 • Liquid-glass search bar: WebGL real-time frost, edge lens refraction and dispersion; 5 sliders: frost, tint, refraction, lens thickness, dispersion.
-• Page elements: show / hide clock, date and search bar; Bing, Baidu and Google search providers.
+• Page elements: show / hide clock, date and search bar; search bar position (top-left / center); Bing, Baidu and Google search providers.
 • Playback: a glass menu in the top-right corner switches videos and toggles sound; volume, playback speed and fit mode are adjustable.
 • Local only: your videos stay in the local Edge extension storage and are never uploaded. The extension itself collects no data.
 

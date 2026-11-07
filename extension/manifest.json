@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "视频新标签页",
   "short_name": "视频新标签页",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "把新标签页变成可自由更换视频的沉浸式背景：WebGL 液态玻璃搜索框、本地视频/直链、播放列表、磨砂与折射滑杆。",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
